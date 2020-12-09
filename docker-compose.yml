@@ -15,16 +15,8 @@ services:
     container_name: redis
     volumes:
       - redis-data:/data
-
-  elasticsearch:
-    image: elasticsearch:alpine
-    container_name: elasticsearch
-    volumes:
-      - elasticsearch-data:/data
-      - ./docker/elasticsearch/logging.yml:/usr/share/elasticsearch/config/logging.yml
-      - ./docker/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-
-  mailcatcher:
+      
+ mailcatcher:
     image: tophfr/mailcatcher
     container_name: mailcatcher
     environment:
